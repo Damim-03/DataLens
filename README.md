@@ -47,3 +47,30 @@ cd DataLens
 
 2️⃣ إنشاء بيئة افتراضية (اختياري)
 Windows:
+
+python -m venv venv
+venv\Scripts\activate
+
+Linux / Mac:
+
+python3 -m venv venv
+source venv/bin/activate
+
+3️⃣ تثبيت المكتبات
+
+pip install -r requirements.txt
+
+أو يدويًا:
+pip install PySide6 pandas openpyxl ydata-profiling matplotlib seaborn reportlab xlsxwriter
+
+4️⃣ تشغيل التطبيق
+python datalens/main.py
+
+
+🚀 المزايا القادمة
+
+📡 استيراد البيانات من قواعد بيانات SQL.
+
+📊 إنشاء Dashboards تفاعلية.
+
+🤖 إضافة خوارزميات Machine Learning بسيطة للتوقع.
