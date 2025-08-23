@@ -46,7 +46,7 @@ DataLens/
 ⚙️ التثبيت والاستخدام
 1️⃣ استنساخ المشروع
 
-git clone https://github.com/YourUsername/DataLens.git
+git clone https://github.com/Damim-03/DataLens.git
 cd DataLens
 
 2️⃣ إنشاء بيئة افتراضية (اختياري)
