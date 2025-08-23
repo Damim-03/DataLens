@@ -27,16 +27,20 @@
 ## 🏗️ هيكل المشروع (MVC)
 ```bash
 DataLens/
-│── data/                 # ملفات Excel
-│── reports/              # نتائج / تقارير PDF و Excel
-│── datalens/
-│   ├── model/            # منطق معالجة البيانات (pandas, profiling..)
-│   ├── view/             # واجهة المستخدم (PySide6 UI)
-│   ├── controller/       # الربط بين model و view
-│   ├── main.py           # ملف التشغيل الرئيسي
 │
-│── requirements.txt      # مكتبات المشروع
-│── README.md             # ملف التوثيق
+├─ .venv/                     
+├─ main.py                    # نقطة البداية لتشغيل التطبيق
+├─ ui/
+│   └─ main_window.ui         # واجهة Qt Designer
+├─ modules/
+│   └─ ui_main_window.py      # ملف Python الناتج من تحويل .ui
+├─ model/
+│   └─ data_model.py          # حفظ البيانات أو الحالة
+├─ controller/
+│   └─ main_controller.py     # منطق التحكم
+└─ view/
+    └─ main_view.py           # واجهة المستخدم
+        # ملف التوثيق
 
 
 ⚙️ التثبيت والاستخدام
@@ -48,12 +52,12 @@ cd DataLens
 2️⃣ إنشاء بيئة افتراضية (اختياري)
 Windows:
 
-python -m venv venv
-venv\Scripts\activate
+python3.11 -m venv venv
+.venv\Scripts\activate
 
 Linux / Mac:
 
-python3 -m venv venv
+python3.11 -m venv venv
 source venv/bin/activate
 
 3️⃣ تثبيت المكتبات
@@ -62,6 +66,12 @@ pip install -r requirements.txt
 
 أو يدويًا:
 pip install PySide6 pandas openpyxl ydata-profiling matplotlib seaborn reportlab xlsxwriter
+
+# تثبيت PyQt6
+pip install PyQt6
+
+# (اختياري) تثبيت Qt Designer مع الأدوات
+pip install pyqt6-tools
 
 4️⃣ تشغيل التطبيق
 python datalens/main.py
