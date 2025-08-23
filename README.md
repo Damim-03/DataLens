@@ -74,7 +74,7 @@ pip install PyQt6
 pip install pyqt6-tools
 
 4️⃣ تشغيل التطبيق
-python datalens/main.py
+python main.py
 
 
 🚀 المزايا القادمة
